@@ -41,5 +41,8 @@ EXPOSE 3000
 # Run as the node user (as ghost does not like running as root).
 USER 1000
 
+# Database environment variables shim.
+COPY entrypoints/60-database.sh /lagoon/entrypoints/
+
 # @TODO wait for the database to start.
 CMD ["node", "current/index.js"]

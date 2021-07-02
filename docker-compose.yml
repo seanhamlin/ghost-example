@@ -45,10 +45,6 @@ services:
       LAGOON_LOCALDEV_HTTP_PORT: 3000
       url: *default-url
       database__client: mysql
-      database__connection__host: mariadb
-      database__connection__user: lagoon
-      database__connection__password: lagoon
-      database__connection__database: lagoon
       database__pool__min: 0
       database__pool__max: 32
       # mail__transport: ${MAIL_TRANSPORT:-Direct}

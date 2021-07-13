@@ -19,7 +19,7 @@ RUN set -eux; \
   npm install -g "ghost-cli@$GHOST_CLI_VERSION"; \
   npm cache clean --force
 
-RUN apk add --no-cache 'su-exec>=0.2'
+RUN apk add --no-cache 'su-exec>=0.2' rsync
 RUN set -eux; \
   mkdir -p "$GHOST_THEMES" && chown node:node "$GHOST_THEMES"; \
   mkdir -p "$GHOST_APPS" && chown node:node "$GHOST_APPS"; \

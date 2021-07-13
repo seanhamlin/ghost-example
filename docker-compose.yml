@@ -44,16 +44,6 @@ services:
       LAGOON_LOCALDEV_URL: *default-url
       LAGOON_LOCALDEV_HTTP_PORT: 3000
       url: *default-url
-      database__client: mysql
-      database__pool__min: 0
-      database__pool__max: 32
-      # mail__transport: ${MAIL_TRANSPORT:-Direct}
-      # mail__options__service: ${MAIL_SERVICE}
-      # mail__options__host: ${MAIL_HOST}
-      # mail__options__port: ${MAIL_PORT:-25}
-      # mail__options__secureConnection: ${MAIL_SECURE:-false}
-      # mail__options__auth__user: ${MAIL_USER}
-      # mail__options__auth__pass: ${MAIL_PASSWORD}
     depends_on:
       - mariadb # basically just tells docker-compose to build the mariadb first
 
